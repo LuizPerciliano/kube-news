@@ -1,17 +1,16 @@
-pipeline{
+pipeline {
     agent any
 
-    stages{
+    stages {
 
-        stage{
+        stage ('Build Docker Image') {
             steps {
-                script{
+                script {
                     dockerapp = docker.build("perciliano/kube-news:${env.BUILD_ID}", '-f ./src/Dockerfile ./')
                 }
             }
         }
 
-
-
     }
+    
 }
