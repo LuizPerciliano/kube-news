@@ -1243,7 +1243,7 @@ metadata:
     app.kubernetes.io/version: "9.2.0"
     app.kubernetes.io/managed-by: Helm
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - name: service
       port: 80
